@@ -4,5 +4,4 @@ import NewBeer from './components/NewBeer';
 
 export default function App() {
   <NewBeer />
-  
 }
