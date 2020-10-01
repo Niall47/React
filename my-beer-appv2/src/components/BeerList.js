@@ -1,23 +1,16 @@
 import React from 'react';
 
-export default class BeerList extends React.Component {
+// this is a presentational/stateless/thin component
+// It doesn't have state
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            beers: props.beers
-        }
-    }
-
-    render() {
-        const {beers} = this.props
-        return(
-            <div>
-                <h3>Beers I drank</h3>
-                <ul>
-                    {beers && beers.map(beer => <li key={beer}>{beer}</li>)}
-                </ul>
-            </div>
-        );
-    }
-}
+export default function BeerList(props) {
+    const {beers} = props;
+    return (
+        <div>
+            <h3>Beers I drank</h3>
+            <ul>
+                {beers && beers.map(beer => <li key={beer}>{beer}</li>)}
+            </ul>
+        </div>
+    )
+};
