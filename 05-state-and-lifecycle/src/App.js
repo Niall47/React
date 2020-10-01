@@ -4,14 +4,13 @@ import Counter from './components/Counter'
 import QuoteGenerator from './components/QuoteGenerator';
 import DeepState from './components/DeepState';
 import AsyncStateMutation from './components/AsyncStateMutation';
+import Parent from './components/lifting-state-up/child';
 
-// This is a react component (custom html element)
-// It is the apps root component
-// all other components eill be rendered within it
 export default function App() {
   return (
     <div className="container">
       <h1 className="display-4 mt-4 mb-4">state-and-lifecycle</h1>
+      <Parent />
       <hr />
       <Counter />
       <hr />
